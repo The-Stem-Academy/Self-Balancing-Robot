@@ -29,4 +29,4 @@ Thank your for visiting this page; this is a 3/5** difficulty project so be pati
 
 ##  
 (*)This one is optional but a nice touch  
-(**)The difficulty rating ranges from 1-5 out of 5, Five being the hardest and One the easiest.
+(**)The difficulty rating ranges from 1-5 out of 5, Five being the hardest and One the easiest.  
