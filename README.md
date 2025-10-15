@@ -21,7 +21,7 @@ You will need the following:
 The assembly process is relitavly straightfoward and requires a handful of various screws which if you dont have - superglue can be use but is not ideal for reasons I state in the Yotube Guide. Feel free to make your own out of wood or carboard; I would be interested to see.
 
 ## Code
-The code will broadcast a WIFI network from your ESP-32 called "Self Balancing Robot Tuner" with the password "12345678" if you connect to this network on any device and go to your web brower and enter "192.168.4.1" to the search bar you will be able to fine tune many values for your robot, over WIFI which will streamline the PID tuning process. Once you have found ideal values you can enter them manually in the code as constants (lines 28 to 38) and then start the robot and just ignore the network.
+The code will broadcast a WIFI network from your ESP-32 called "Self Balancing Robot Tuner" with the password "12345678" if you connect to this network on any device and go to your web brower and enter "192.168.4.1" to the search bar you will be able to fine tune many values for your robot, over WIFI which will streamline the PID tuning process. Once you have found ideal values you can enter them manually in the code as constants (lines 28 to 38) and then start the robot and just ignore the network. You will also need to install the [roboEyes library](https://github.com/FluxGarage/RoboEyes)
 
 ## Final notes
 Thank your for visiting this page; this is a 3/5** difficulty project so be patient and have fun building  
