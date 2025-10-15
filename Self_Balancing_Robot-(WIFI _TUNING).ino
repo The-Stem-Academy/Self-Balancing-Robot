@@ -34,7 +34,7 @@ float gyroRateDeg = 0.0;
 float lastOutput = 0.0;
 float powerMultiplier = 1.0;
 int minPWM = 80;
-float tiltGain = 1.0; // NEW: multiplies PID output to maximise PWM range
+float tiltGain = 1.0;
 unsigned long lastMicrosTs = 0;
 
 // --- Wi-Fi & Web ---
@@ -74,9 +74,9 @@ void setup() {
   display.setRotation(2);
   display.clearDisplay();
   display.setTextColor(SSD1306_WHITE);
-  display.setTextSize(2); display.setCursor(0, 0); display.println(F("WIFI-TUNING MOD"));
-  display.setTextSize(1); display.setCursor(0, 20); display.println(F("Connect to WiFi:"));
-  display.setCursor(0, 30); display.println(F("Self balancing robot tuning")); display.display(); delay(3000);
+  display.setTextSize(2); display.setCursor(0, 0); display.println(F("Self Balancing Robot"));
+  display.setTextSize(1); display.setCursor(0, 20); display.println(F("Please Hold Upright"));
+  display.setCursor(0, 30); display.println(F("Robot Will Start Soon")); display.display(); delay(3000);
   display.clearDisplay(); display.display();
 
   // RoboEyes
