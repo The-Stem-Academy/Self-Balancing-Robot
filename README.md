@@ -21,7 +21,7 @@ You will need the following:
 * 8-10x ~1-1.5mm M3 bolts and their corresponding nuts (for attaching various components)**
 * 12x ~15mm M3 wood screws (for attaching each 3d printed part)**
 
-(*)This one is optional but a nice touch if your not going to use them I belive you can upload the same code just not connect them. \n
+(*)This one is optional but a nice touch if your not going to use them I belive you can upload the same code just not connect them. <br>
 (**)Whatever screws work for you, maybe even glue but I wouldn't advice that (its covered in the video)
 
 ## Assembly
