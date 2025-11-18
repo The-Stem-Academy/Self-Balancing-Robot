@@ -49,7 +49,7 @@ Attach the L298N to the third plate (4) in the orientation shown in the image an
 ### Final assembly
 Using some M3 * 15mm wood screws as shown bellow:
 
-<img src="https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/Screw_IMG.jpegraw=true" width="20%" style="" alt="Mounting the Motors">
+<img src="https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/Screw_IMG.jpeg?raw=true" width="20%" style="" alt="Mounting the Motors">
 
 Screw your logic board plate onto the battery and motor plate
 
