@@ -41,25 +41,25 @@ For the STL you will need:
 * 1x [Layer 4](https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/Layer_4.stl) \
 I was able to fit them all on one print bed on my ender 3 pro so with NO SUPPORTS and a 0.12mm layer height but everything should work, its pretty simple to print.
 
-<img src="https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/IMG_1.png?raw=true" width="50%" style="" alt="Mounting the Motors">
+<img src="https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/IMG_1.png?raw=true" width="50%" style="" alt="IMG0">
 
 ### Mounting the motors
 First you must put some superglue in the small rectangular divots on the bottom plate (1) (be generous with the glue here). Then place the rectangular motor mounts (2) into those holes (I needed to use a hammer). Then using (~300mm M3 nuts and bolts(3)) screw the motors to the mounts. Then mount your battery to the middle of the bottom plate (you could drill holes for screws for your battery or just glue it tight). 
 It should look something like this: 
 
-<img src="https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/IMG_1.png?raw=true" width="50%" style="" alt="Mounting the Motors">
+<img src="https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/IMG_1.png?raw=true" width="50%" style="" alt="IMG1">
 
 ### Logic Board
 Next we make the main logic board for the robot. According to this schematic, I left connections for the L298N and OLEDs as empty pin headers so that I can attach jumper wires too later (but you could use a breadboard).
 
-<img src="https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/Schematic_Wiring_Image.jpg?raw=true" width="50%" style="" alt="Mounting the Motors">
+<img src="https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/Schematic_Wiring_Image.jpg?raw=true" width="50%" style="" alt="Scematic">
 
 
 I use a piece of perfboard and some random breadboard power supply but you could probably use the 5v from the L298N (details about this are in the video).
 
 This is how mine looked (Ignore the extra cables and USB-C port – I broke the one on the ESP32):
 
-<img src="https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/IMG_2.png?raw=true" width="50%" style="" alt="Mounting the Motors">
+<img src="https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/IMG_2.png?raw=true" width="50%" style="" alt="IMG2">
 
 You can then attach your logic board to the second layer plate. (4) through the use of M3 nuts and bolts (5) or just glue. Make sure the MPU605 is horizontally level and if you are screwing use stand offs (I 3D printed mine)
 
@@ -67,34 +67,34 @@ You can then attach your logic board to the second layer plate. (4) through the 
 ### The motor driver
 Attach the L298N to the correct plate (6) in the orientation shown in the image and attach some jumper wires to the corresponding parts on the L298N and route through the hole., also you can attach jumper wires to both OLEDs and using hot glue attach them to the front of the board (7) and run the wires through the cable routing hole (8) also shown bellow:
 
-<img src="https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/IMG_3.jpeg?raw=true" width="50%" style="" alt="Mounting the Motors">
+<img src="https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/IMG_3.jpeg?raw=true" width="50%" style="" alt="IMG3">
 
 ### Final assembly
 Using some M3 * 15mm wood screws (9) as shown bellow:
 
-<img src="https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/IMG_4.jpeg?raw=true" width="20%" style="" alt="Mounting the Motors">
+<img src="https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/IMG_4.jpeg?raw=true" width="20%" style="" alt="IMG4">
 
 Screw your logic board plate onto the motor base plate and make sure you route the motor wires up to the logic board as you can see next to both motors in the image.
 
-<img src="https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/IMG_5.png?raw=true" width="50%" style="" alt="Mounting the Motors">
+<img src="https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/IMG_5.png?raw=true" width="50%" style="" alt="IMG5">
 
 Connect the routed jumper wired from the OLEDs and L298N from the previous step to the corresponding connections on the logic board through the cable routing hole and the motor wires and any power cables to the L298N as demonstrated below.
 
-<img src="https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/IMG_6.jpg?raw=true" width="50%" style="" alt="Mounting the Motors">
+<img src="https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/IMG_6.jpg?raw=true" width="50%" style="" alt="IMG6">
 
 Next push that part onto the top of the logic board layer and screw it down, this might be a bit fiddly but it should end up illustrated as below.
 
-<img src="https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/IMG_7.jpeg?raw=true" width="50%" style="" alt="Mounting the Motors">
+<img src="https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/IMG_7.jpeg?raw=true" width="50%" style="" alt="IMG7">
 
 Then connect the power and motor wires to the L298N
 
-<img src="https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/IMG_8.jpeg?raw=true" width="50%" style="" alt="Mounting the Motors">
+<img src="https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/IMG_8.jpeg?raw=true" width="50%" style="" alt="IMG8">
 
 Finally screw on the top lid plate
 
-<img src="https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/IMG_9.jpeg?raw=true" width="50%" style="" alt="Mounting the Motors">
+<img src="https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/IMG_9.jpeg?raw=true" width="50%" style="" alt="IMG9">
 
-## You have now made your self balancing robot. Time to make some code.
+## You have now made your self balancing robot. Time upload the code.
 
 ## Code
 
