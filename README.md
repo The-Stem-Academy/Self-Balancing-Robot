@@ -26,6 +26,13 @@ It should look something like this:
 
 <img src="https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/Mounting_The_Motors_IMG.png?raw=true" width="50%" style="" alt="Mounting the Motors">
 
+### Logic Board
+Next we make the main logic board for the robot. According to this schematic, I left connections for the L298N and OLEDs as empty pin headers so that I can attach jumper wires too later (but you could use a breadboard).
+<img src="https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/Schematic_Wiring_Image.jpg?raw=true" width="50%" style="" alt="Mounting the Motors">
+
+
+
+
 ## Code
 The code will broadcast a WIFI network from your ESP-32 called "Self Balancing Robot Tuner" with the password "12345678" if you connect to this network on any device and go to your web browser and enter "192.168.4.1" to the search bar you will be able to fine tune many values for your robot, over WIFI which will streamline the PID tuning process. Once you have found ideal values you can enter them manually in the code as constants (lines 28 to 38) and then start the robot and just ignore the network. You will also need to install the [roboEyes library](https://github.com/FluxGarage/RoboEyes)
 
@@ -35,5 +42,7 @@ Thank you for visiting this page; this is a 3/5** difficulty project so be patie
 
 ##  
 (*)This one is optional but a nice touch   
+
+
 
 
