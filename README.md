@@ -22,7 +22,7 @@ The assembly process is relatively straightforward and requires a handful of dif
 
 ### Mounting the motors
 First you must put some superglue in the small rectangular divots on the bottom plate (1) (be generous with the glue here). Then place the rectangular motor mounts (2) into those holes (I needed to use a hammer). Then using (~130mm M3 screws and bolts) screw the motors to the mounts. Then mount your battery to the middle of the bottom plate (you could drill holes for screws for your battery or just glue it tight). It should look something like this: 
-<img src="https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/Mounting_The_Motors.png?raw=true" width="50%" style="transform: rotate(270deg);" alt="Mounting the Motors">
+<img src="https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/Mounting_The_Motors_IMG.png?raw=true" width="50%" style="" alt="Mounting the Motors">
 
 ## Code
 The code will broadcast a WIFI network from your ESP-32 called "Self Balancing Robot Tuner" with the password "12345678" if you connect to this network on any device and go to your web browser and enter "192.168.4.1" to the search bar you will be able to fine tune many values for your robot, over WIFI which will streamline the PID tuning process. Once you have found ideal values you can enter them manually in the code as constants (lines 28 to 38) and then start the robot and just ignore the network. You will also need to install the [roboEyes library](https://github.com/FluxGarage/RoboEyes)
