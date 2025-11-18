@@ -98,7 +98,7 @@ Finally screw on the top lid plate
 
 ## Code
 
-<u>There are a few variations of the code and it is **VERY important** that you use the correct one:<u/>
+## There are a few variations of the code and it is **VERY important** that you use the correct one:<u/>
 
 * If you **DO want the web server** for PID tuning AND you **DO want OLEDs** then choose the [STANDARD varient](https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/Self_Balancing_Robot_Code.ino)
 * 
@@ -108,8 +108,11 @@ Finally screw on the top lid plate
 * 
 * If you are using a non wifi enabld board or you just **don't want the web server** for PID tuning but you **DO NOT want OLED displays** then choose the [WITHOUTWEBSERVER_AND_WITHOUTOLEDS varient](https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/Self_Balancing_Robot_Code_WITHOUTWEBSERVER_AND_WITHOUTOLEDS.ino)
 
+# Setup with the wifi server
+Upon running the code a WIFI network will be broadcasted from your ESP32 named “Self Balancing Robot Tuner” with the password “12345678” (if you use the web server)if you connect to this network on any device and go to your web browser and enter "192.168.4.1" to the search bar you will be able to fine tune many values for your robot, over WIFI which will streamline the PID tuning process. Once you have found ideal values you can enter them manually in the code as constants, to do this choose the varient for your choice of OLEDs, but **without** the web server and enter your P, I and D values in as hard constants. You will also need to install the [roboEyes library](https://github.com/FluxGarage/RoboEyes) if you are using OLEDs.
 
-Upon running the code a WIFI network will be broadcasted from your ESP32 named “Self Balancing Robot Tuner” with the password “12345678” if you connect to this network on any device and go to your web browser and enter "192.168.4.1" to the search bar you will be able to fine tune many values for your robot, over WIFI which will streamline the PID tuning process. Once you have found ideal values you can enter them manually in the code as constants (lines 28 to 38) and then start the robot and just ignore the network. You will also need to install the [roboEyes library](https://github.com/FluxGarage/RoboEyes)
+# Setup without the wifi server
+You will have to change the P, I and D values manually as constants in your code and keep reuploading until it balances. You will also need to install the [roboEyes library](https://github.com/FluxGarage/RoboEyes) if you are using OLEDs.
 
 ## Final notes
 Thank you for visiting this page, I hope you enjoy your build, and don't get too disheartened when it doesn't balance straight away after uploading the code (I spent days tuning). If you get stuck just check out the video and if you're still not sure feel free to leave a comment.
