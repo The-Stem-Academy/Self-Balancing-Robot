@@ -14,14 +14,14 @@ You will need the following:
 * 1x MPU 6050  
 * 2x DC gear motors (with weels)  
 * Loads of wires  
-* 2x 0.96 OLED displays*  
+* 2x 0.96 OLED displays* 
 * 1x Perfboard PCB (you can use a breadboard or whatever method you wish to connect the components)  
 
 * 4x ~300mm M3 bolts and their corresponding nuts (for the motors)**
 * 8-10x ~1-1.5mm M3 bolts and their corresponding nuts (for attaching various components)**
 * 12x ~15mm M3 wood screws (for attaching each 3d printed part)**
 
-(*)This one is optional but a nice touch
+(*)This one is optional but a nice touch if your not going to use them I belive you can upload the same code just not connect them.\
 (**)Whatever screws work for you, maybe even glue but I wouldn't advice that (its covered in the video)
 
 ## Assembly
@@ -98,12 +98,10 @@ Finally screw on the top lid plate
 
 ## Code
 
-If you are using the OLED displays then use the 
-“Self_Balancing_Robot_WITHOLED_Code.ino” 
-but if your not using OLED displays then just use the 
-“Self_Balancing_Robot_Code.ino”
+The code is here on the github repo [code](https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/Self_Balancing_Robot_WITHOLED_Code.ino)
 
-Upon running the code a WIFI network will be broadcasted from your ESP32 named “Self Balancing Robot Tuner” with the password “12345678” if you connect to this network on any device and go to your web browser and enter "192.168.4.1" to the search bar you will be able to fine tune many values for your robot, over WIFI which will streamline the PID tuning process. Once you have found ideal values you can enter them manually in the code as constants (lines 28 to 38 in the WITHOLED version) and then start the robot and just ignore the network. You will also need to install the [roboEyes library](https://github.com/FluxGarage/RoboEyes)
+
+Upon running the code a WIFI network will be broadcasted from your ESP32 named “Self Balancing Robot Tuner” with the password “12345678” if you connect to this network on any device and go to your web browser and enter "192.168.4.1" to the search bar you will be able to fine tune many values for your robot, over WIFI which will streamline the PID tuning process. Once you have found ideal values you can enter them manually in the code as constants (lines 28 to 38) and then start the robot and just ignore the network. You will also need to install the [roboEyes library](https://github.com/FluxGarage/RoboEyes)
 
 ## Final notes
 Thank you for visiting this page, I hope you enjoy your build, and don't get too disheartened when it doesn't balance straight away after uploading the code (I spent days tuning). If you get stuck just check out the video and if you're still not sure feel free to leave a comment.
