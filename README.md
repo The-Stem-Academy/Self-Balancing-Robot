@@ -54,6 +54,7 @@ Next we make the main logic board for the robot. According to this schematic, I 
 
 <img src="https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/Schematic_Wiring_Image.jpg?raw=true" width="50%" style="" alt="Scematic">
 
+<br>
 # Now this part is **VERY** IMPORTANT, if you ARE NOT using OLED displays in your robot you MUST wire the MPU6050 with:
 * SDA on pin 21
 * SCL on pin 22
@@ -64,7 +65,6 @@ This is different to if you where to use OLEDs in your project due to the split 
 * SCL on pin 23
 * You MUST also use the correct pullup resistors since the second buss doesnt have inbuilt pullups you should use a 4.7 kΩ resistor between the VCC and SDA and SCL lines.
 
-<img src="<img src="https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/IMG_2.png?raw=true" width="50%" style="" alt="IMG2">" width="50%" style="" alt="IMG2">
 
 I use a piece of perfboard and some random breadboard power supply but you could probably use the 5v from the L298N (details about this are in the video).
 
