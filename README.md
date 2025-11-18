@@ -98,7 +98,7 @@ Finally screw on the top lid plate
 
 ## Code
 
-There are a few variations of the code and it is **VERY important** that you use the correct one:
+<u>There are a few variations of the code and it is **VERY important** that you use the correct one:<u/>
 
 * If you **DO want the web server** for PID tuning AND you **DO want OLEDs** then choose the [STANDARD varient](https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/Self_Balancing_Robot_Code.ino)
 * 
