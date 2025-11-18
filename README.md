@@ -55,7 +55,7 @@ Next we make the main logic board for the robot. According to this schematic, I 
 <img src="https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/Schematic_Wiring_Image.jpg?raw=true" width="50%" style="" alt="Scematic">
 
 <br>
-#### Now this part is **VERY** IMPORTANT, if you ARE NOT using OLED displays in your robot you MUST wire the MPU6050 with:
+### Now this part is **VERY** IMPORTANT, if you ARE NOT using OLED displays in your robot you MUST wire the MPU6050 with:
 * SDA on pin 21
 * SCL on pin 22
 This is different to if you where to use OLEDs in your project due to the split I2c wires.
