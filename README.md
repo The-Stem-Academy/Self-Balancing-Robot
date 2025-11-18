@@ -98,7 +98,8 @@ Finally screw on the top lid plate
 
 ## Code
 
-The code is here on the github repo [code](https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/Self_Balancing_Robot_WITHOLED_Code.ino)
+The code is here on the github repo [code](https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/Self_Balancing_Robot_WITHOLED_Code.ino) <br>
+When you first upload the code it probably won't balance great but you must find the point of equalibrium which is where the robot naturally want to balance and make sure you input that to the web access point and tune the P, I and D values accordingly.
 
 
 Upon running the code a WIFI network will be broadcasted from your ESP32 named “Self Balancing Robot Tuner” with the password “12345678” if you connect to this network on any device and go to your web browser and enter "192.168.4.1" to the search bar you will be able to fine tune many values for your robot, over WIFI which will streamline the PID tuning process. Once you have found ideal values you can enter them manually in the code as constants (lines 28 to 38) and then start the robot and just ignore the network. You will also need to install the [roboEyes library](https://github.com/FluxGarage/RoboEyes)
