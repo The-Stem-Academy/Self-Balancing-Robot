@@ -61,7 +61,7 @@ Next we make the main logic board for the robot. According to this schematic, I 
 * SCL on pin 23
 * You MUST also use the correct pullup resistors since the second buss doesnt have inbuilt pullups you should use a 4.7 kΩ resistor between the VCC and SDA and SCL lines.
 
-<img src="https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/IMG_11.jpg?raw=true" width="15%" style="" alt="IMG3">
+<img src="https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/IMG_11.jpg?raw=true" width="15%" style="" alt="IMG11">
 
 
 I use a piece of perfboard and some random breadboard power supply but you could probably use the 5v from the L298N (details about this are in the video).
