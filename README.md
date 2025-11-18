@@ -21,7 +21,7 @@ You will need the following:
 * 8-10x ~1-1.5mm M3 bolts and their corresponding nuts (for attaching various components)**
 * 12x ~15mm M3 wood screws (for attaching each 3d printed part)**
 
-(*)This one is optional but a nice touch if your not going to use them I belive you can upload the same code just not connect them. <br>
+(*)This one is optional but a nice touch if your not going to use them make sure you get the correct code and wiring, there are more IMPORTANT details about this at the bottom of the page. <br>
 (**)Whatever screws work for you, maybe even glue but I wouldn't advice that (its covered in the video)
 
 ## Assembly
@@ -98,8 +98,12 @@ Finally screw on the top lid plate
 
 ## Code
 
-The code is here on the github repo [code](https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/Self_Balancing_Robot_WITHOLED_Code.ino) <br>
-When you first upload the code it probably won't balance great but you must find the point of equalibrium which is where the robot naturally want to balance and make sure you input that to the web access point and tune the P, I and D values accordingly.
+There are a few variations of the code and it is **VERY important** that you use the correct one:
+
+* If you **DO want the web server** for PID tuning AND you **DO want OLEDs** then choose the [STANDARD varient](https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/Self_Balancing_Robot_Code.ino)
+* If you **DO want the web server** for PID tuning AND you **DO NOT want OLEDs** then choose the [WITHOUTOLEDS varient](https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/Self_Balancing_Robot_Code_WITHOUTOLEDs.ino)
+* If you are using a non wifi enabled board or you just **don't want the web server** for PID tuning but you **DO want OLED displays** the coose the [WITHOUTWEBSERVER varient](https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/Self_Balancing_Robot_Code_WITHOUTWEBSERVER.ino)
+* If you are using a non wifi enabld board or you just **don't want the web server** for PID tuning but you **DO NOT want OLED displays** then choose the [WITHOUTWEBSERVER_AND_WITHOUTOLEDS varient](https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/Self_Balancing_Robot_Code_WITHOUTWEBSERVER_AND_WITHOUTOLEDS.ino)
 
 
 Upon running the code a WIFI network will be broadcasted from your ESP32 named “Self Balancing Robot Tuner” with the password “12345678” if you connect to this network on any device and go to your web browser and enter "192.168.4.1" to the search bar you will be able to fine tune many values for your robot, over WIFI which will streamline the PID tuning process. Once you have found ideal values you can enter them manually in the code as constants (lines 28 to 38) and then start the robot and just ignore the network. You will also need to install the [roboEyes library](https://github.com/FluxGarage/RoboEyes)
