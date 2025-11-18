@@ -60,7 +60,7 @@ Next we make the main logic board for the robot. According to this schematic, I 
 * SCL on pin 22
 This is different to if you where to use OLEDs in your project due to the split I2c wires.
 
-# Now this part is **VERY** IMPORTANT, if you ARE using OLED displays in your robot you MUST wire the MPU6050 with:
+### Now this part is **VERY** IMPORTANT, if you ARE using OLED displays in your robot you MUST wire the MPU6050 with:
 * SDA on pin 32
 * SCL on pin 23
 * You MUST also use the correct pullup resistors since the second buss doesnt have inbuilt pullups you should use a 4.7 kΩ resistor between the VCC and SDA and SCL lines.
