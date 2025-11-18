@@ -101,8 +101,11 @@ Finally screw on the top lid plate
 There are a few variations of the code and it is **VERY important** that you use the correct one:
 
 * If you **DO want the web server** for PID tuning AND you **DO want OLEDs** then choose the [STANDARD varient](https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/Self_Balancing_Robot_Code.ino)
+* 
 * If you **DO want the web server** for PID tuning AND you **DO NOT want OLEDs** then choose the [WITHOUTOLEDS varient](https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/Self_Balancing_Robot_Code_WITHOUTOLEDs.ino)
+* 
 * If you are using a non wifi enabled board or you just **don't want the web server** for PID tuning but you **DO want OLED displays** the coose the [WITHOUTWEBSERVER varient](https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/Self_Balancing_Robot_Code_WITHOUTWEBSERVER.ino)
+* 
 * If you are using a non wifi enabld board or you just **don't want the web server** for PID tuning but you **DO NOT want OLED displays** then choose the [WITHOUTWEBSERVER_AND_WITHOUTOLEDS varient](https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/Self_Balancing_Robot_Code_WITHOUTWEBSERVER_AND_WITHOUTOLEDS.ino)
 
 
