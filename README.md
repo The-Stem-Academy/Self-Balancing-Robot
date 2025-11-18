@@ -28,9 +28,15 @@ It should look something like this:
 
 ### Logic Board
 Next we make the main logic board for the robot. According to this schematic, I left connections for the L298N and OLEDs as empty pin headers so that I can attach jumper wires too later (but you could use a breadboard).
+
 <img src="https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/Schematic_Wiring_Image.jpg?raw=true" width="50%" style="" alt="Mounting the Motors">
 
 
+I use a piece of perfboard and some random breadboard power supply but you could probably use the 5v from the L298N (details about this are in the video).
+
+This is how mine looked (Ignore the extra cables and USB-C port – I broke the one on the ESP32):
+
+<img src="https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/Logic_Board_Diagram.png?raw=true" width="50%" style="" alt="Mounting the Motors">
 
 
 ## Code
