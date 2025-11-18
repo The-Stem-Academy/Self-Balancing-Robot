@@ -22,6 +22,7 @@ The assembly process is relatively straightforward and requires a handful of dif
 
 ### Mounting the motors
 First you must put some superglue in the small rectangular divots on the bottom plate (1) (be generous with the glue here). Then place the rectangular motor mounts (2) into those holes (I needed to use a hammer). Then using (~130mm M3 screws and bolts) screw the motors to the mounts. Then mount your battery to the middle of the bottom plate (you could drill holes for screws for your battery or just glue it tight). It should look something like this: 
+
 <img src="https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/Mounting_The_Motors_IMG.png?raw=true" width="50%" style="" alt="Mounting the Motors">
 
 ## Code
