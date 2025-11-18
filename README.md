@@ -41,7 +41,7 @@ For the STL you will need:
 * 1x [Layer 4](https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/Layer_4.stl) \
 I was able to fit them all on one print bed on my ender 3 pro so with NO SUPPORTS and a 0.12mm layer height but everything should work, its pretty simple to print.
 
-<img src="https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/IMG_1.png?raw=true" width="50%" style="" alt="IMG0">
+<img src="https://photos.google.com/share/AF1QipP7NVxQF8hP6J1h8TZGAR9ua8qImw6qq2WF8t8SBOu9kUGCoJMBuj6_OCTKBv-9OQ?key=dV8teTFvQkRsMEhSY1RlS0tqZ1VLY0ZBWjFfMjhB?raw=true" width="50%" style="" alt="IMG0">
 
 ### Mounting the motors
 First you must put some superglue in the small rectangular divots on the bottom plate (1) (be generous with the glue here). Then place the rectangular motor mounts (2) into those holes (I needed to use a hammer). Then using (~300mm M3 nuts and bolts(3)) screw the motors to the mounts. Then mount your battery to the middle of the bottom plate (you could drill holes for screws for your battery or just glue it tight). 
