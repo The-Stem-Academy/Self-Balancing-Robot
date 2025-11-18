@@ -110,13 +110,12 @@ You have now made your self balancing robot. Time upload the code.
 
 ### There are a few variations of the code and it is **VERY important** that you use the correct one:<u/>
 
-* If you **DO want the web server** for PID tuning AND you **DO want OLEDs** then choose the [STANDARD varient](https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/Self_Balancing_Robot_Code.ino)
-* 
-* If you **DO want the web server** for PID tuning AND you **DO NOT want OLEDs** then choose the [WITHOUTOLEDS varient](https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/Self_Balancing_Robot_Code_WITHOUTOLEDs.ino)
-* 
-* If you are using a non wifi enabled board or you just **don't want the web server** for PID tuning but you **DO want OLED displays** the coose the [WITHOUTWEBSERVER varient](https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/Self_Balancing_Robot_Code_WITHOUTWEBSERVER.ino)
-* 
-* If you are using a non wifi enabld board or you just **don't want the web server** for PID tuning but you **DO NOT want OLED displays** then choose the [WITHOUTWEBSERVER_AND_WITHOUTOLEDS varient](https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/Self_Balancing_Robot_Code_WITHOUTWEBSERVER_AND_WITHOUTOLEDS.ino)
+| Web Server | OLEDs | Variant Name                        |
+|------------|--------|-------------------------------------|
+| ✅         | ✅     | STANDARD                            |
+| ✅         | ❌     | WITHOUTOLEDS                        |
+| ❌         | ✅     | WITHOUTWEBSERVER                    |
+| ❌         | ❌     | WITHOUTWEBSERVER_AND_WITHOUTOLEDS  |
 
 ## Setup with the wifi server
 Upon running the code a WIFI network will be broadcasted from your ESP32 named “Self Balancing Robot Tuner” with the password “12345678” (if you use the web server)if you connect to this network on any device and go to your web browser and enter "192.168.4.1" to the search bar you will be able to fine tune many values for your robot, over WIFI which will streamline the PID tuning process. Once you have found ideal values you can enter them manually in the code as constants, to do this choose the varient for your choice of OLEDs, but **without** the web server and enter your P, I and D values in as hard constants. You will also need to install the [roboEyes library](https://github.com/FluxGarage/RoboEyes) if you are using OLEDs.
