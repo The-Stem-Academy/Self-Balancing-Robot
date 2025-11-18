@@ -30,7 +30,16 @@ The assembly process is relatively straightforward and requires a handful of dif
 ### The 3D print
 You will need some sort of chassis for the robot, my preferred method is 3D printing since it is accessible for me and provides a rigid and strong chassis. If you don't have a 3D printer you could try making something out of wood or cardboard – I would be interested to see what you made.
 
-The [STL] and [Fusion360] files are available free of charge here on the repo.
+The STL and Fusion360 files are available free of charge:
+[Fusion360 file](https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/Self_Balancing_Robot_Fusion360.f3d)
+
+For the STL you will need:
+2x [Motor mounts](https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/Motor_Mount.stl)
+1x [Layer 1](https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/Layer_1.stl)
+1x [Layer 2](https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/Layer_2.stl)
+1x [Layer 3](https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/Layer_3.stl)
+1x [Layer 4](https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/Layer_4.stl)
+I was able to fit them all on one print bed on my ender 3 pro so with NO SUPPORTS and a 0.12mm layer height but everything should work, its pretty simple to print.
 
 <img src="https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/IMG_1.png?raw=true" width="50%" style="" alt="Mounting the Motors">
 
