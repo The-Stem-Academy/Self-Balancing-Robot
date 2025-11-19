@@ -22,7 +22,7 @@ You will need the following:
 * 12x ~15mm M3 wood screws (for attaching each 3d printed part)**
 
 (*)This one is optional but a nice touch if your not going to use them make sure you get the correct code and wiring, there are more IMPORTANT details about this at the bottom of the page. <br>
-(**)Whatever screws work for you, maybe even glue but I wouldn't advice that (its covered in the video)
+(**)Whatever screws work for you, maybe even glue but I wouldn't advice that (it's covered in the video)
 
 ## Assembly
 The assembly process is relatively straightforward and requires a handful of different screws. If you don’t have them, superglue can be used as an alternative—though it’s not ideal, for reasons I explain in the YouTube guide. Feel free to make your own version out of wood or cardboard, I’d love to see what you come up with.
