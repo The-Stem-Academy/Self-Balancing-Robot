@@ -28,7 +28,7 @@ You will need the following:
 The assembly process is relatively straightforward and requires a handful of different screws. If you don’t have them, superglue can be used as an alternative—though it’s not ideal, for reasons I explain in the YouTube guide. Feel free to make your own version out of wood or cardboard, I’d love to see what you come up with.
 
 ### The 3D print
-You will need some sort of chassis for the robot, my preferred method is 3D printing since it is accessible for me and provides a rigid and strong chassis. If you don't have a 3D printer you could try making something out of wood or cardboard – I would be interested to see what you made.
+You’ll need a chassis for the robot. My preferred method is 3D printing, since it’s accessible and produces a rigid, strong frame. If you don’t have a 3D printer, you could build one from wood or cardboard. I’d be interested to see what you come up with.
 
 The STL and Fusion360 files are available free of charge:
 [Fusion360 file](https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/Self_Balancing_Robot_Fusion360.f3d)
