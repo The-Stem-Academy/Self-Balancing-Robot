@@ -39,7 +39,8 @@ For the STL you will need:
 * 1x [Layer 2](https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/Layer_2.stl)
 * 1x [Layer 3](https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/Layer_3.stl)
 * 1x [Layer 4](https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/Layer_4.stl) \
-I was able to fit them all on one print bed on my ender 3 pro so with NO SUPPORTS and a 0.12mm layer height but everything should work, its pretty simple to print.
+I was able to fit them all on one Ender 3 Pro print bed with NO SUPPORTS at a 0.12mm layer height - I designed this to be easy to print so you shouldn't have any problems
+
 
 <img src="IMG_0.png?raw=true" width="50%" style="" alt="IMG0">
 
