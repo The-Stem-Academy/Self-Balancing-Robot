@@ -66,7 +66,7 @@ Next we make the main logic board for the robot. According to this schematic, I 
 ### Now this part is **VERY** IMPORTANT, if you ARE using OLED displays in your robot you MUST wire the MPU6050 with:
 * SDA on pin 32
 * SCL on pin 23
-* You MUST also use the correct pullup resistors since the second bus doesnt have inbuilt pullups you should use a 4.7 kΩ resistor between the VCC and SDA and SCL lines.
+* You MUST also use the correct pullup resistors since the second bus doesnt have inbuilt pullups you should use a 4.7 kΩ (or similar) resistor between the VCC and SDA and SCL lines.
 * If your unsure just give it a google - it's pretty simple
 
 <img src="https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/IMG_11.jpg?raw=true" width="15%" style="" alt="IMG11">
