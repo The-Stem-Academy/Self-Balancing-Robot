@@ -53,7 +53,7 @@ It should look something like this:
 ### Logic Board
 Next we make the main logic board for the robot. According to this schematic, I left connections for the L298N and OLEDs as empty pin headers so that I can attach jumper wires too later (but you could use a breadboard).
 
-<img src="https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/Schematic_Wiring_Image.jpg?raw=true" width="50%" style="" alt="Scematic">
+<img src="https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/83848955d0391b579f4cd93c0ff3cc62d9659683/Schematic.png?raw=true" width="50%" style="" alt="Scematic">
 
 
 
