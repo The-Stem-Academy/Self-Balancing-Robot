@@ -56,6 +56,14 @@ Next we make the main logic board for the robot. According to this schematic, I 
 <img src="https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/83848955d0391b579f4cd93c0ff3cc62d9659683/Schematic.png?raw=true" width="50%" style="" alt="Scematic">
 
 
+### Now this part is **VERY** IMPORTANT, if you ARE NOT using OLED displays in your robot you MUST wire the MPU6050 with:
+* SDA on pin 21
+* SCL on pin 22
+* NOT what the schematic says but the motor driver pins remain the same
+* NO pullup resisotors are required
+
+<img src="https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/IMG_11.jpg?raw=true" width="15%" style="" alt="IMG11">
+
 
 ### Now this part is **VERY** IMPORTANT, if you ARE using OLED displays in your robot you MUST wire the MPU6050 with:
 * SDA on pin 32
