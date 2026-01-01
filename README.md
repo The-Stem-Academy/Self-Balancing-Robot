@@ -1,141 +1,186 @@
 # Self Balancing Robot Project Files
 ## By The STEM Academy
 
-### This site provides a place for you to access project files and code - free of charge!
+### This site provides a place for you to access project files and code — free of charge!
 
-If you have any questions please visit our [5-minute Youtube Video](https://youtu.be/3z8Bph11x7s) and leave a comment
+If you have any questions, please visit our [5‑minute YouTube video](https://youtu.be/3z8Bph11x7s) and leave a comment.
+
+---
 
 ## Required Hardware
-You will need the following:  
 
-* 1x L298N motor driver  
-* 1x ESP-32 or similar board  
-* 1x 7 ish volt battery since voltage is lost in the motor driver but whatever works for you is fine  
-* 1x MPU 6050  
-* 2x DC gear motors (with weels)  
-* Loads of wires  
-* 2x 0.96 OLED displays* 
-* 1x Perfboard PCB (you can use a breadboard or whatever method you wish to connect the components)  
+You will need the following:
 
-* 4x ~300mm M3 bolts and their corresponding nuts (for the motors)**
-* 8-10x ~1-1.5mm M3 bolts and their corresponding nuts (for attaching various components)**
-* 12x ~15mm M3 wood screws (for attaching each 3d printed part)**
+* 1× L298N motor driver  
+* 1× ESP‑32 or similar board  
+* 1× ~7 V battery (voltage is lost in the motor driver, but anything around this works)  
+* 1× MPU‑6050  
+* 2× DC gear motors (with wheels)  
+* Loads of jumper wires  
+* 2× 0.96" OLED displays*  
+* 1× Perfboard PCB (or a breadboard — any method of connecting components is fine)
 
-(*)This one is optional but a nice touch if your not going to use them make sure you get the correct code and wiring, there are more IMPORTANT details about this at the bottom of the page. <br>
-(**)Whatever screws work for you, maybe even glue but I wouldn't advice that (it's covered in the video)
+Fasteners:
+
+* 4× ~30 mm M3 bolts + nuts (for the motors)**  
+* 8–10× ~10–15 mm M3 bolts + nuts (for attaching components)**  
+* 12× ~15 mm M3 wood screws (for attaching the 3D‑printed parts)**  
+
+\* Optional, but a nice touch. If you’re not using OLEDs, make sure you use the correct wiring and code — details at the bottom of the page.  
+\** Whatever screws work for you are fine. Glue is possible, but not recommended (explained in the video).
+
+---
 
 ## Assembly
-The assembly process is relatively straightforward and requires a handful of different screws. If you don’t have them, superglue can be used as an alternative—though it’s not ideal, for reasons I explain in the YouTube guide. Feel free to make your own version out of wood or cardboard, I’d love to see what you come up with.
 
-### The 3D print
-You’ll need a chassis for the robot. My preferred method is 3D printing, since it’s accessible and produces a rigid, strong frame. If you don’t have a 3D printer, you could build one from wood or cardboard. I’d be interested to see what you come up with.
+The assembly process is straightforward and only requires a few screws. If you don’t have them, superglue can be used as an alternative — though it’s not ideal. Feel free to make your own version out of wood or cardboard; I’d love to see what you come up with.
 
-The STL and Fusion360 files are available free of charge:
-[Fusion360 file](https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/Self_Balancing_Robot_Fusion360.f3d)
+---
 
-For the STL you will need:
-* 2x [Motor mounts](https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/Motor_Mount.stl)
-* 1x [Layer 1](https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/Layer_1.stl)
-* 1x [Layer 2](https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/Layer_2.stl)
-* 1x [Layer 3](https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/Layer_3.stl)
-* 1x [Layer 4](https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/Layer_4.stl) \
-I was able to fit them all on one Ender 3 Pro print bed with NO SUPPORTS at a 0.12mm layer height - I designed this to be easy to print so you shouldn't have any problems
+### The 3D Print
 
+You’ll need a chassis for the robot. My preferred method is 3D printing, since it’s accessible and produces a rigid, strong frame. If you don’t have a 3D printer, you can build one from wood or cardboard.
 
-<img src="IMG_0.png?raw=true" width="50%" style="" alt="IMG0">
+The STL and Fusion 360 files are available free of charge:
 
-### Mounting the motors
-First you must put some superglue in the small rectangular divots on the bottom plate (1) (be generous with the glue here). Then place the rectangular motor mounts (2) into those holes (I needed to use a hammer). Then using (~300mm M3 nuts and bolts(3)) screw the motors to the mounts. Then mount your battery to the middle of the bottom plate (you could drill holes for screws for your battery or just glue it tight). 
-It should look something like this: 
+- [Fusion 360 file](Self_Balancing_Robot_Fusion360.f3d)
 
-<img src="https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/IMG_1.png?raw=true" width="50%" style="" alt="IMG1">
+For the STL files you will need:
+
+* 2× [Motor Mounts](Motor_Mount.stl)  
+* 1× [Layer 1](Layer_1.stl)  
+* 1× [Layer 2](Layer_2.stl)  
+* 1× [Layer 3](Layer_3.stl)  
+* 1× [Layer 4](Layer_4.stl)
+
+All parts fit on an Ender 3 Pro print bed with **no supports** at **0.12 mm layer height**.
+
+<img src="IMG_0.png?raw=true" width="50%" alt="IMG0">
+
+---
+
+### Mounting the Motors
+
+1. Add superglue to the rectangular divots on the bottom plate (1).  
+2. Press the motor mounts (2) into place (I needed a hammer).  
+3. Use ~30 mm M3 bolts (3) to secure the motors.  
+4. Mount your battery in the centre — either with screws or glue.
+
+It should look like this:
+
+<img src="IMG_1.png?raw=true" width="50%" alt="IMG1">
+
+---
 
 ### Logic Board
-Next we make the main logic board for the robot. According to this schematic, I left connections for the L298N and OLEDs as empty pin headers so that I can attach jumper wires too later (but you could use a breadboard).
 
-<img src="https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/83848955d0391b579f4cd93c0ff3cc62d9659683/Schematic.png?raw=true" width="50%" style="" alt="Scematic">
+Next, make the main logic board for the robot. According to the schematic, I left connections for the L298N and OLEDs as empty pin headers so I could attach jumper wires later (you can also use a breadboard).
 
+<img src="Schematic.png?raw=true" width="50%" alt="Schematic">
 
-### Now this part is **VERY** IMPORTANT, if you ARE NOT using OLED displays in your robot you MUST wire the MPU6050 with:
-* SDA on pin 21
-* SCL on pin 22
-* NOT what the schematic says but the motor driver pins remain the same
-* NO pullup resisotors are required
+---
 
+### **IMPORTANT: MPU‑6050 Wiring**
 
-### Now this part is **VERY** IMPORTANT, if you ARE using OLED displays in your robot you MUST wire the MPU6050 with:
-* SDA on pin 32
-* SCL on pin 23
-* You MUST also use the correct pullup resistors since the second bus doesnt have inbuilt pullups you should use a 4.7 kΩ (or similar) resistor between the VCC and SDA and SCL lines.
-* If your unsure just give it a google - it's pretty simple
+#### If you are **NOT** using OLED displays:
+* SDA → GPIO 21  
+* SCL → GPIO 22  
+* Motor driver pins remain the same  
+* No pull‑up resistors required  
 
-<img src="https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/IMG_11.jpg?raw=true" width="15%" style="" alt="IMG11">
+#### If you **ARE** using OLED displays:
+* SDA → GPIO 32  
+* SCL → GPIO 23  
+* Add 4.7 kΩ pull‑up resistors from VCC to SDA and SCL (the second I²C bus has no internal pull‑ups)  
+* If you’re unsure, a quick Google search will help — it’s simple  
 
+<img src="IMG_11.jpg?raw=true" width="15%" alt="IMG11">
 
-I use a piece of perfboard and some random breadboard power supply but you could probably use the 5v from the L298N (details about this are in the video).
+I used a piece of perfboard and a small breadboard power supply, but you can also use the 5 V output from the L298N (explained in the video).
 
-This is how mine looked (Ignore the extra cables and USB-C port – I broke the one on the ESP32):
+Here’s how mine looked (ignore the extra cables and USB‑C port — I broke the one on the ESP32):
 
-<img src="https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/IMG_2.png?raw=true" width="50%" style="" alt="IMG2">
+<img src="IMG_2.png?raw=true" width="50%" alt="IMG2">
 
-You can then attach your logic board to the second layer plate. (4) through the use of M3 nuts and bolts (5) or just glue. Make sure the MPU605 is horizontally level and if you are screwing use stand offs (I 3D printed mine)
+Attach your logic board to the second layer plate (4) using M3 bolts (5) or glue. Make sure the MPU‑6050 is level. If using screws, add standoffs (I 3D‑printed mine).
 
+---
 
-### The motor driver
-Attach the L298N to the correct plate (6) in the orientation shown in the image and attach some jumper wires to the corresponding parts on the L298N and route through the hole., also you can attach jumper wires to both OLEDs and using hot glue attach them to the front of the board (7) and run the wires through the cable routing hole (8) also shown bellow:
+### The Motor Driver
 
-<img src="https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/IMG_3.jpeg?raw=true" width="50%" style="" alt="IMG3">
+Attach the L298N to the correct plate (6) in the orientation shown. Add jumper wires and route them through the hole. If using OLEDs, glue them to the front (7) and route their wires through the cable hole (8).
 
-### Final assembly
-Using some M3 * 15mm wood screws (9) as shown bellow:
+<img src="IMG_3.jpeg?raw=true" width="50%" alt="IMG3">
 
-<img src="https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/IMG_4.jpeg?raw=true" width="20%" style="" alt="IMG4">
+---
 
-Screw your logic board plate onto the motor base plate and make sure you route the motor wires up to the logic board as you can see next to both motors in the image.
+### Final Assembly
 
-<img src="https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/IMG_5.png?raw=true" width="50%" style="" alt="IMG5">
+Use M3 × 15 mm wood screws (9) as shown below:
 
-Connect the routed jumper wired from the OLEDs and L298N from the previous step to the corresponding connections on the logic board through the cable routing hole and the motor wires and any power cables to the L298N as demonstrated below.
+<img src="IMG_4.jpeg?raw=true" width="20%" alt="IMG4">
 
-<img src="https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/IMG_6.jpg?raw=true" width="50%" style="" alt="IMG6">
+Attach the logic board plate to the motor base plate and route the motor wires upward:
 
-Next push that part onto the top of the logic board layer and screw it down, this might be a bit fiddly but it should end up illustrated as below.
+<img src="IMG_5.png?raw=true" width="50%" alt="IMG5">
 
-<img src="https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/IMG_7.jpeg?raw=true" width="50%" style="" alt="IMG7">
+Connect the OLED and L298N wires to the logic board through the cable routing hole:
 
-Then connect the power and motor wires to the L298N
+<img src="IMG_6.jpg?raw=true" width="50%" alt="IMG6">
 
-<img src="https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/IMG_8.jpeg?raw=true" width="50%" style="" alt="IMG8">
+Attach the top of the logic board layer and screw it down:
 
-Finally screw on the top lid plate
+<img src="IMG_7.jpeg?raw=true" width="50%" alt="IMG7">
 
-<img src="https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/IMG_9.jpeg?raw=true" width="50%" style="" alt="IMG9">
+Connect the power and motor wires to the L298N:
 
-You have now made your self balancing robot. Time upload the code.
+<img src="IMG_8.jpeg?raw=true" width="50%" alt="IMG8">
+
+Finally, screw on the top lid plate:
+
+<img src="IMG_9.jpeg?raw=true" width="50%" alt="IMG9">
+
+You have now built your self‑balancing robot. Time to upload the code.
+
+---
 
 ## Code
 
-### There are a few variations of the code and it is **VERY important** that you use the correct one:<u/>
+### It is **VERY important** that you use the correct code variant:
 
-| Web Server | OLEDs | Code varient                        |
-|------------|--------|-------------------------------------|
-| ✅         | ✅     | [STANDARD](https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/Self_Balancing_Robot_Code.ino)                            |
-| ✅         | ❌     | [WITHOUTOLEDS](https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/Self_Balancing_Robot_Code_WITHOUTOLEDs.ino)                        |
-| ❌         | ✅     | [WITHOUTWEBSERVER](https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/Self_Balancing_Robot_Code_WITHOUTWEBSERVER.ino)                    |
-| ❌         | ❌     | [WITHOUTWEBSERVER_AND_WITHOUTOLEDS](https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/Self_Balancing_Robot_Code_WITHOUTWEBSERVER_AND_WITHOUTOLEDS.ino)  |
+| Web Server | OLEDs | Code Variant |
+|------------|--------|--------------|
+| ✅ | ✅ | STANDARD |
+| ✅ | ❌ | WITHOUTOLEDs |
+| ❌ | ✅ | WITHOUTWEBSERVER |
+| ❌ | ❌ | WITHOUTWEBSERVER_AND_WITHOUTOLEDs |
 
-## Setup with the wifi server
-Upon running the code a WIFI network will be broadcasted from your ESP32 named “Self Balancing Robot Tuner” with the password “12345678” (if you use the web server)if you connect to this network on any device and go to your web browser and enter "192.168.4.1" to the search bar you will be able to fine tune many values for your robot, over WIFI which will streamline the PID tuning process. Once you have found ideal values you can enter them manually in the code as constants, to do this choose the varient for your choice of OLEDs, but **without** the web server and enter your P, I and D values in as hard constants. You will also need to install the [roboEyes library](https://github.com/FluxGarage/RoboEyes) if you are using OLEDs.
+---
 
-## Setup without the wifi server
-You will have to change the P, I and D values manually as constants in your code and keep reuploading until it balances. You will also need to install the [roboEyes library](https://github.com/FluxGarage/RoboEyes) if you are using OLEDs.
+## Setup With the WiFi Server
 
-## Final notes
-Thank you for visiting this page, I hope you enjoy your build, and don't get too disheartened when it doesn't balance straight away after uploading the code (I spent days tuning). If you get stuck just check out the video and if you're still not sure feel free to leave a comment.
+When the code runs, the ESP32 will broadcast a WiFi network named **“Self Balancing Robot Tuner”** with password **12345678**.
 
-Many thanks,
-The STEM Academy 
+Connect to it, open a browser, and go to:
+192.168.4.1
 
 
+You can fine‑tune PID values over WiFi. Once you find ideal values, switch to the **non‑web‑server** code variant and enter your P, I, and D constants manually.
 
+If using OLEDs, install the [RoboEyes library](https://github.com/FluxGarage/RoboEyes).
 
+---
+
+## Setup Without the WiFi Server
+
+You will need to manually adjust the P, I, and D constants in the code and re‑upload until the robot balances.  
+Install the RoboEyes library if using OLEDs.
+
+---
+
+## Final Notes
+
+Thank you for visiting this page. I hope you enjoy your build, and don’t get too disheartened if it doesn’t balance straight away — PID tuning takes time (I spent days on it). If you get stuck, check the video, and if you’re still unsure, feel free to leave a comment.
+
+Many thanks,  
+**The STEM Academy**
