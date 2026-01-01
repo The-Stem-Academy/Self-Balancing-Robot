@@ -148,14 +148,14 @@ You have now built your self‑balancing robot. Time to upload the code.
 
 ### It is **VERY important** that you use the correct code variant:
 
-| Web Server | OLEDs | Code Variant |
-|------------|--------|--------------|
-| ✅ | ✅ | STANDARD |
-| ✅ | ❌ | WITHOUTOLEDs |
-| ❌ | ✅ | WITHOUTWEBSERVER |
-| ❌ | ❌ | WITHOUTWEBSERVER_AND_WITHOUTOLEDs |
 
----
+| Web Server | OLEDs | Code varient                        |
+|------------|--------|-------------------------------------|
+| ✅         | ✅     | [STANDARD](https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/Self_Balancing_Robot_Code.ino)                            |
+| ✅         | ❌     | [WITHOUTOLEDS](https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/Self_Balancing_Robot_Code_WITHOUTOLEDs.ino)                        |
+| ❌         | ✅     | [WITHOUTWEBSERVER](https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/Self_Balancing_Robot_Code_WITHOUTWEBSERVER.ino)                    |
+| ❌         | ❌     | [WITHOUTWEBSERVER_AND_WITHOUTOLEDS](https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/Self_Balancing_Robot_Code_WITHOUTWEBSERVER_AND_WITHOUTOLEDS.ino)  |
+
 
 ## Setup With the WiFi Server
 
