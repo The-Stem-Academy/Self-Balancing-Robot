@@ -102,7 +102,7 @@ Here’s how mine looked (ignore the extra cables and USB‑C port — I broke t
 
 <img src="IMG_2.png?raw=true" width="50%" alt="IMG2">
 
-Attach your logic board to the second layer plate (4) using M3 bolts (5) or glue. Make sure the MPU‑6050 is level. If using screws, add standoffs (I 3D‑printed mine).
+Attach your logic board to the second layer plate (4) using M3 bolts (5) or glue. Make sure the MPU‑6050 is level and the same orientation. If using screws, add standoffs (I 3D‑printed mine).
 
 ---
 
