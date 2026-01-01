@@ -184,9 +184,3 @@ Thank you for visiting this page. I hope you enjoy your build, and don’t get t
 
 Many thanks,  
 **The STEM Academy**
-
-
-
-
-
-_Some content may be AI generated_
