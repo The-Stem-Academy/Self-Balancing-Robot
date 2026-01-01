@@ -186,4 +186,7 @@ Many thanks,
 **The STEM Academy**
 
 
-Some content may be AI generated.
+
+
+
+_Some content may be AI generated_
