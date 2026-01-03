@@ -74,7 +74,7 @@ It should look like this:
 
 ### Logic Board
 
-Next, make the main logic board for the robot. According to the schematic, I left connections for the L298N and OLEDs as empty pin headers so I could attach jumper wires later (you can also use a breadboard).
+Next, make the main logic board for the robot. According to the correct schematic for your version, I left connections for the L298N and OLEDs as empty pin headers so I could attach jumper wires later (you can also use a breadboard).
 
 <img src="Schematic.png?raw=true" width="50%" alt="Schematic">
 
@@ -92,7 +92,7 @@ Next, make the main logic board for the robot. According to the schematic, I lef
 * SDA → GPIO 32  
 * SCL → GPIO 23  
 * Add 4.7 kΩ pull‑up resistors from VCC to SDA and SCL (the second I²C bus has no internal pull‑ups)  
-* If you’re unsure, a quick Google search will help — it’s simple  
+* If you’re unsure, a quick Google search will definitely help — it’s simple  
 
 <img src="IMG_11.jpg?raw=true" width="15%" alt="IMG11">
 
