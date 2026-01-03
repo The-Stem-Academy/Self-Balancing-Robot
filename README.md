@@ -37,7 +37,7 @@ The assembly process is straightforward and only requires a few screws. If you d
 
 ---
 
-### The 3D Print
+## The 3D Print
 
 You’ll need a chassis for the robot. My preferred method is 3D printing, since it’s accessible and produces a rigid, strong frame. If you don’t have a 3D printer, you can build one from wood or cardboard.
 
@@ -59,7 +59,7 @@ All parts fit on an Ender 3 Pro print bed with **no supports** at **0.12 mm la
 
 ---
 
-### Mounting the Motors
+## Mounting the Motors
 
 1. Add superglue to the rectangular divots on the bottom plate (1).  
 2. Press the motor mounts (2) into place (I needed a hammer).  
@@ -72,11 +72,17 @@ It should look like this:
 
 ---
 
-### Logic Board
+## Logic Board
 
 Next, make the main logic board for the robot. According to the correct schematic for your version, I left connections for the L298N and OLEDs as empty pin headers so I could attach jumper wires later (you can also use a breadboard).
 
-<img src="Schematic.png?raw=true" width="50%" alt="Schematic">
+### Wiring Schematics (With & Without OLEDs)
+
+#### **With OLED Displays**
+<img src="https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/79af27011fac6bfa03b16720f8fb7d417f5f1e9b/WiringSchematic_WithOLED'S.png?raw=true" width="60%" alt="Wiring With OLEDs">
+
+#### **Without OLED Displays**
+<img src="https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/79af27011fac6bfa03b16720f8fb7d417f5f1e9b/WiringSchematic_WithoutOLED's.png?raw=true" width="60%" alt="Wiring Without OLEDs">
 
 ---
 
@@ -91,8 +97,9 @@ Next, make the main logic board for the robot. According to the correct schemati
 #### If you **ARE** using OLED displays:
 * SDA → GPIO 32  
 * SCL → GPIO 23  
-* Add 4.7 kΩ pull‑up resistors from VCC to SDA and SCL (the second I²C bus has no internal pull‑ups)  
-* If you’re unsure, a quick Google search will definitely help — it’s simple  
+* Add 4.7 kΩ pull‑up resistors from VCC to SDA and SCL  
+* The second I²C bus has no internal pull‑ups  
+* If you’re unsure, a quick Google search will help — it’s simple  
 
 <img src="IMG_11.jpg?raw=true" width="15%" alt="IMG11">
 
@@ -102,11 +109,11 @@ Here’s how mine looked (ignore the extra cables and USB‑C port — I broke t
 
 <img src="IMG_2.png?raw=true" width="50%" alt="IMG2">
 
-Attach your logic board to the second layer plate (4) using M3 bolts (5) or glue. Make sure the MPU‑6050 is level and the same orientation. If using screws, add standoffs (I 3D‑printed mine).
+Attach your logic board to the second layer plate (4) using M3 bolts (5) or glue. Make sure the MPU‑6050 is level and in the same orientation. If using screws, add standoffs (I 3D‑printed mine).
 
 ---
 
-### The Motor Driver
+## The Motor Driver
 
 Attach the L298N to the correct plate (6) in the orientation shown. Add jumper wires and route them through the hole. If using OLEDs, glue them to the front (7) and route their wires through the cable hole (8).
 
@@ -114,7 +121,7 @@ Attach the L298N to the correct plate (6) in the orientation shown. Add jumper w
 
 ---
 
-### Final Assembly
+## Final Assembly
 
 Use M3 × 15 mm wood screws (9) as shown below:
 
@@ -148,22 +155,22 @@ You have now built your self‑balancing robot. Time to upload the code.
 
 ### It is **VERY important** that you use the correct code variant:
 
+| Web Server | OLEDs | Code variant |
+|------------|--------|--------------|
+| ✅ | ✅ | [STANDARD](https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/Self_Balancing_Robot_Code.ino) |
+| ✅ | ❌ | [WITHOUTOLEDS](https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/Self_Balancing_Robot_Code_WITHOUTOLEDs.ino) |
+| ❌ | ✅ | [WITHOUTWEBSERVER](https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/Self_Balancing_Robot_Code_WITHOUTWEBSERVER.ino) |
+| ❌ | ❌ | [WITHOUTWEBSERVER_AND_WITHOUTOLEDS](https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/Self_Balancing_Robot_Code_WITHOUTWEBSERVER_AND_WITHOUTOLEDS.ino) |
 
-| Web Server | OLEDs | Code varient                        |
-|------------|--------|-------------------------------------|
-| ✅         | ✅     | [STANDARD](https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/Self_Balancing_Robot_Code.ino)                            |
-| ✅         | ❌     | [WITHOUTOLEDS](https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/Self_Balancing_Robot_Code_WITHOUTOLEDs.ino)                        |
-| ❌         | ✅     | [WITHOUTWEBSERVER](https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/Self_Balancing_Robot_Code_WITHOUTWEBSERVER.ino)                    |
-| ❌         | ❌     | [WITHOUTWEBSERVER_AND_WITHOUTOLEDS](https://github.com/The-Stem-Academy/Self-Balancing-Robot/blob/main/Self_Balancing_Robot_Code_WITHOUTWEBSERVER_AND_WITHOUTOLEDS.ino)  |
-
+---
 
 ## Setup With the WiFi Server
 
 When the code runs, the ESP32 will broadcast a WiFi network named **“Self Balancing Robot Tuner”** with password **12345678**.
 
 Connect to it, open a browser, and go to:
-192.168.4.1
 
+**192.168.4.1**
 
 You can fine‑tune PID values over WiFi. Once you find ideal values, switch to the **non‑web‑server** code variant and enter your P, I, and D constants manually.
 
