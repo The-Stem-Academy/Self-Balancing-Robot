@@ -164,6 +164,13 @@ You have now built your self‑balancing robot. Time to upload the code.
 
 ---
 
+## PID Tuning
+
+This part of the build is the most tedious and annoying part, it can take days, but before you start it is worth finding the robots equalibrium point (where it balances without any assistance) and putting that value in the "Setpoint" option.
+This probably isn't necessary unless your cg is way off the center.
+
+---
+
 ## Setup With the WiFi Server
 
 When the code runs, the ESP32 will broadcast a WiFi network named **“Self Balancing Robot Tuner”** with password **12345678**.
