@@ -27,7 +27,7 @@ Fasteners:
 * 12× ~15 mm M3 wood screws (for attaching the 3D‑printed parts)**  
 
 \* Optional, but a nice touch. If you’re not using OLEDs, make sure you use the correct wiring and code — details at the bottom of the page.  
-\** Whatever screws work for you are fine. Glue is possible, but not recommended (explained in the video).
+\** Whatever screws work for you are fine. Glue is possible, but not recommended.
 
 ---
 
