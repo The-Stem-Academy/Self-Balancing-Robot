@@ -1,5 +1,5 @@
 # Self Balancing Robot Project Files
-## By The STEM Academy
+## By How To STEM
 
 ### This site provides a place for you to access project files and code — free of charge!
 
