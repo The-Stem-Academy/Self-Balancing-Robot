@@ -11,7 +11,7 @@ const int ENA = 23, IN1 = 25, IN2 = 26;
 const int ENB = 18, IN3 = 27, IN4 = 4;
 const int PWM_FREQ = 1000, PWM_RES = 8;
 
-// Pid constants hard baked into the code
+// PID CONSTANTS (this is the bit where you put the details from your website testing
 float Kp = 14.0;
 float Ki = 0.0;
 float Kd = 1.2;
@@ -31,8 +31,8 @@ unsigned long lastMicrosTs = 0;
 void setup() {
   Serial.begin(115200);
 
-  // Standard I2c
-  Wire.begin();  // uses GPIO21(SDA) + GPIO22(SCL)
+  //I2c
+  Wire.begin();
 
   if (!mpu.begin(0x68)) {
     Serial.println("MPU6050 not found!");
@@ -43,7 +43,7 @@ void setup() {
   mpu.setGyroRange(MPU6050_RANGE_500_DEG);
   mpu.setFilterBandwidth(MPU6050_BAND_21_HZ);
 
-  // motors
+  // motors start
   pinMode(IN1, OUTPUT);
   pinMode(IN2, OUTPUT);
   pinMode(IN3, OUTPUT);
@@ -56,14 +56,11 @@ void setup() {
 }
 
 void loop() {
-  // compute dt
   unsigned long nowUs = micros();
   float dt = (nowUs - lastMicrosTs) / 1e6f;
   if (dt <= 0) dt = 0.001f;
   lastMicrosTs = nowUs;
 
-  // read MPU6050
-  sensors_event_t a, g, t;
   mpu.getEvent(&a, &g, &t);
 
   float accelAngleDeg = -atan2(a.acceleration.x, a.acceleration.z) * 180.0f / PI;
@@ -78,7 +75,6 @@ void loop() {
 
   lastOutput = (Kp * error + Ki * integral - Kd * gyroRateDeg) * tiltGain;
 
-  // drive motors
   driveMotors(lastOutput);
 }
 
