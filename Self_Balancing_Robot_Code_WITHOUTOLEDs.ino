@@ -30,7 +30,6 @@ WebServer server(80);
 const char* ssid = "Self Balancing Robot Tuner";
 const char* password = "12345678";
 
-// Webpage
 const char* html = R"rawliteral(
 <!DOCTYPE html><html><head><meta charset="UTF-8"><title>PID Tuner</title>
 <style>body{font-family:sans-serif;text-align:center;}input{width:80px;}</style></head>
@@ -58,8 +57,8 @@ void setup() {
   Serial.begin(115200);
 
   // begin i2c
-  Wire.begin();  // SDA/SCL on ESP32 defaults (GPIO21 / GPIO22)
-
+  Wire.begin();
+  
   if (!mpu.begin(0x68)) {
     Serial.println("MPU6050 not found!");
     while (1);
@@ -75,12 +74,11 @@ void setup() {
   ledcAttach(ENA, PWM_FREQ, PWM_RES);
   ledcAttach(ENB, PWM_FREQ, PWM_RES);
 
-  // Wifi AP
+  // Wifi ap start
   WiFi.softAP(ssid, password);
   Serial.print("AP IP: ");
   Serial.println(WiFi.softAPIP());
 
-  // web routes
   server.on("/", [](){ server.send(200, "text/html", html); });
 
   server.on("/set", [](){
@@ -123,7 +121,7 @@ void loop() {
   float accelAngleDeg = -atan2(a.acceleration.x, a.acceleration.z) * 180.0f / PI;
   gyroRateDeg = g.gyro.y * (180.0f / PI);
 
-  // Complementary filter (98% gyro, 2% accel)
+  // Complementary filter
   angleDeg = 0.98f * (angleDeg + gyroRateDeg * dt) + 0.02f * accelAngleDeg;
 
   float error = setpoint - angleDeg;
