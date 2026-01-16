@@ -24,7 +24,7 @@ const int ENA = 23, IN1 = 25, IN2 = 26;
 const int ENB = 18, IN3 = 27, IN4 = 4;
 const int PWM_FREQ = 1000, PWM_RES = 8;
 
-// Pid constants
+// PID CONSTANTS (this is the bit where you put the details from your website testing
 float setpoint = 0.0;
 float Kp = 14.0;
 float Ki = 0.0;
