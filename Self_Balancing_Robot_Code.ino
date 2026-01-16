@@ -7,7 +7,7 @@
 #include <Adafruit_Sensor.h>
 #include <math.h>
 
-// --- OLED ---
+// OLEDs
 #define SCREEN_WIDTH 128
 #define SCREEN_HEIGHT 64
 #define OLED_RESET    -1
@@ -16,16 +16,16 @@ Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 
 roboEyes roboEyes;
 
-// --- MPU6050 on second I2C bus ---
+// MPU6050 on buss 2
 TwoWire I2CMPU = TwoWire(1);
 Adafruit_MPU6050 mpu;
 
-// --- Motor pins (L298N) ---
+// l298n pins
 const int ENA = 23, IN1 = 25, IN2 = 26;
 const int ENB = 18, IN3 = 27, IN4 = 4;
 const int PWM_FREQ = 1000, PWM_RES = 8;
 
-// --- PID ---
+// PID CONSTANTS
 float setpoint = 0.0;
 float Kp = 14.0, Ki = 0.0, Kd = 1.2;
 float integral = 0.0;
@@ -37,12 +37,11 @@ int minPWM = 80;
 float tiltGain = 1.0;
 unsigned long lastMicrosTs = 0;
 
-// --- Wi-Fi & Web ---
+// Wifi and webserver
 WebServer server(80);
 const char* ssid = "Self Balancing Robot Tuner";
 const char* password = "12345678";
 
-// --- Web page ---
 const char* html = R"rawliteral(
 <!DOCTYPE html><html><head><meta charset="UTF-8"><title>PID Tuner</title>
 <style>body{font-family:sans-serif;text-align:center;}input{width:80px;}</style></head>
@@ -69,7 +68,6 @@ setInterval(()=>fetch("/telemetry").then(r=>r.text()).then(t=>telemetry.innerTex
 void setup() {
   Serial.begin(115200);
 
-  // OLED splash
   if (!display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) while (1);
   display.setRotation(2);
   display.clearDisplay();
@@ -83,25 +81,24 @@ void setup() {
   roboEyes.begin(SCREEN_WIDTH, SCREEN_HEIGHT, 100);
   roboEyes.setCyclops(ON); roboEyes.setAutoblinker(ON, 2, 3); roboEyes.setIdleMode(ON, 3, 2);
 
-  // MPU6050
+  // MPU 6050 start
   I2CMPU.begin(32, 33, 400000);
   if (!mpu.begin(0x68, &I2CMPU)) while (1);
   mpu.setAccelerometerRange(MPU6050_RANGE_8_G);
   mpu.setGyroRange(MPU6050_RANGE_500_DEG);
   mpu.setFilterBandwidth(MPU6050_BAND_21_HZ);
 
-  // Motors
+  // Motors start
   pinMode(IN1, OUTPUT); pinMode(IN2, OUTPUT);
   pinMode(IN3, OUTPUT); pinMode(IN4, OUTPUT);
   ledcAttach(ENA, PWM_FREQ, PWM_RES);
   ledcAttach(ENB, PWM_FREQ, PWM_RES);
 
-  // Wi-Fi AP
+  // Wi-Fi ap start
   WiFi.softAP(ssid, password);
   IPAddress IP = WiFi.softAPIP();
   Serial.print("AP IP: "); Serial.println(IP);
 
-  // Web routes
   server.on("/", [](){ server.send(200, "text/html", html); });
   server.on("/set", [](){
     if (server.hasArg("kp")) Kp = server.arg("kp").toFloat();
@@ -145,7 +142,6 @@ void loop() {
 
   float error = setpoint - angleDeg;
   integral += error * dt;
-  // Apply tilt gain here
   lastOutput = (Kp * error + Ki * integral - Kd * gyroRateDeg) * tiltGain;
 
   driveMotors(lastOutput);
