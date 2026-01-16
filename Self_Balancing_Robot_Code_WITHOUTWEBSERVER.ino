@@ -7,7 +7,7 @@
 #include <math.h>
 #include <FluxGarage_RoboEyes.h>
 
-// OLED
+// OLEDs
 #define SCREEN_WIDTH 128
 #define SCREEN_HEIGHT 64
 #define OLED_RESET -1
@@ -25,7 +25,7 @@ const int ENB = 18, IN3 = 27, IN4 = 4;
 const int PWM_FREQ = 1000, PWM_RES = 8;
 
 // Pid constants
-float setpoint = 0.0;      // Balance point
+float setpoint = 0.0;
 float Kp = 14.0;
 float Ki = 0.0;
 float Kd = 1.2;
@@ -44,7 +44,6 @@ unsigned long lastMicrosTs = 0;
 void setup() {
   Serial.begin(115200);
 
-  // OLED splash screen
   if (!display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) while (1);
   display.setRotation(2);
   display.clearDisplay();
@@ -72,7 +71,7 @@ void setup() {
   roboEyes.setAutoblinker(ON, 2, 3);
   roboEyes.setIdleMode(ON, 3, 2);
 
-  // MPU6050
+  // MPU6050 start
   I2CMPU.begin(32, 33, 400000);
   if (!mpu.begin(0x68, &I2CMPU)) while (1);
 
@@ -80,7 +79,7 @@ void setup() {
   mpu.setGyroRange(MPU6050_RANGE_500_DEG);
   mpu.setFilterBandwidth(MPU6050_BAND_21_HZ);
 
-  // Motors
+  // Motors start
   pinMode(IN1, OUTPUT); pinMode(IN2, OUTPUT);
   pinMode(IN3, OUTPUT); pinMode(IN4, OUTPUT);
 
@@ -101,7 +100,6 @@ void loop() {
   sensors_event_t a, g, t;
   mpu.getEvent(&a, &g, &t);
 
-  // Calculate tilt angle
   float accelAngleDeg = -atan2(a.acceleration.x, a.acceleration.z) * 180.0f / PI;
   gyroRateDeg = g.gyro.y * (180.0f / PI);
 
