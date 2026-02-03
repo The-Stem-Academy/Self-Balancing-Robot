@@ -4,7 +4,7 @@
 https://www.tiegh.com/projects/self-balancing-robot
 
 
-# This file is purley legacy and may be removed in future
+# This file is purley legacy and will be removed in future
 
 
 # Self Balancing Robot Project Files
